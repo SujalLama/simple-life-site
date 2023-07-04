@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./header.css";
 
 export default function Header() {
   return (
@@ -10,8 +11,8 @@ export default function Header() {
         </div>
 
         <nav>
-          <ul>
-            <li>Home</li>
+          <ul className='nav-list'>
+            <li className='nav-list-item'>Home</li>
             <li>About me</li>
             <li>Recent posts</li>
           </ul>

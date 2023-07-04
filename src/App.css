@@ -1,6 +1,15 @@
 /* =========
 Default Styling
 ============= */
+:root {
+  --heading-font-size: 2.4rem;
+  --body-font-size: 1.8rem;
+  --primary-color: #143774;
+  --secondary-color: #1792D2;
+  --text-color: #707070;
+  --gray-color: #717171;
+  --light-gray-color: #F8F8F8;
+}
 
 * {
   margin: 0;
@@ -14,6 +23,7 @@ html {
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  font-size: var(--body-font-size);
 }
 
 h1 {
