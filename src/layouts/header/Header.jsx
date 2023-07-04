@@ -1,6 +1,21 @@
 import React from 'react';
 import "./header.css";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
+const navData = [
+  {
+    name: 'Home',
+    link: '/',
+  },
+  {
+    name: 'About me',
+    link: '/about',
+  },
+  {
+    name: 'Recent Posts',
+    link: '/recent-posts',
+  }
+]
 
 export default function Header() {
   return (
@@ -13,9 +28,15 @@ export default function Header() {
 
         <nav>
           <ul className='nav-list'>
-            <li className='nav-list-item'><Link to="/" className='nav-list-link'>Home</Link></li>
-            <li><Link to="/about" className='nav-list-link'>About me</Link></li>
-            <li><Link to="/recent-posts" className='nav-list-link'>Recent posts</Link></li>
+            {
+              navData.map((navItem) => {
+                const {name, link} = navItem;
+
+                return <li className='nav-list-item'>
+                  <NavLink to={link} className={({isActive}) => isActive ? 'nav-list-link active' : 'nav-list-link'}>{name}</NavLink></li>;
+              })
+            }
+            
           </ul>
         </nav>
       </div>
